@@ -25,7 +25,7 @@ export function PostActions({ postId, prompt, initialVote, favorite }: { postId:
         <button className={`btn ${initialVote === "USEFUL" ? "" : "secondary"}`} onClick={() => act({ action: "vote", value: "USEFUL" })}><ThumbsUp size={16} /> Útil</button>
         <button className={`btn ${initialVote === "NOT_USEFUL" ? "" : "secondary"}`} onClick={() => act({ action: "vote", value: "NOT_USEFUL" })}><ThumbsDown size={16} /> No útil</button>
         <button className="btn secondary" onClick={() => act({ action: "favorite" })}><Bookmark size={16} fill={favorite ? "currentColor" : "none"} /> {favorite ? "Guardado" : "Guardar"}</button>
-        <button className="btn secondary" onClick={() => { const reason = prompt("¿Por qué reportas esta publicación?"); if (reason) act({ action: "report", reason }); }}><Flag size={16} /> Reportar</button>
+        <button className="btn secondary" onClick={() => { const reason = window.prompt("¿Por qué reportas esta publicación?"); if (reason) act({ action: "report", reason }); }}><Flag size={16} /> Reportar</button>
       </div>
       {message && <p className={message.includes("sesión") ? "flash error" : "flash"}>{message}</p>}
       <div className="card" style={{ padding: 20, marginTop: 25 }}>

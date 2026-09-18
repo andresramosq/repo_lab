@@ -36,7 +36,7 @@ export async function Explorer({ params = {}, title }: { params?: ExplorerParams
     <section className="section">
       <div className="container">
         {title && <h1 style={{ fontSize: 38, marginTop: 0 }}>{title}</h1>}
-        <form action="/search" className="card" style={{ padding: 16, display: "grid", gridTemplateColumns: "2fr 1fr 1fr auto", gap: 10, marginBottom: 26 }}>
+        <form action="/search" className="card filter-grid">
           <input className="field" name="q" defaultValue={params.q} placeholder="Busca CV, investigación, código..." />
           <select className="field" name="category" defaultValue={params.category || ""}>
             <option value="">Todas las categorías</option>

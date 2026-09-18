@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: { default: "Repositorio para Compartir", template: "%s | Repositorio para Compartir" },
   description: "Comunidad para compartir prompts, guías y conocimiento práctico de inteligencia artificial.",

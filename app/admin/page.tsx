@@ -16,7 +16,7 @@ export default async function AdminPage() {
   return (
     <main className="container section">
       <h1>Administración</h1>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14 }}>
+      <div className="summary-grid">
         {[["Usuarios", users.length], ["Publicaciones", posts], ["Votos hoy", votesToday]].map(([k, v]) => <div className="card" style={{ padding: 20 }} key={k}><span className="muted">{k}</span><div style={{ fontSize: 32, fontWeight: 900 }}>{v}</div></div>)}
       </div>
       <h2 style={{ marginTop: 40 }}>Reportes abiertos</h2>

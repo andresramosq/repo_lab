@@ -17,7 +17,7 @@ export default async function DashboardPage() {
   return (
     <main className="container section">
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}><div><h1>Tu panel</h1><p className="muted">Hola, {session.user.name}. Este es el impacto de lo que compartes.</p></div><Link className="btn" href="/posts/new">Nueva publicación</Link></div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, margin: "25px 0 40px" }}>
+      <div className="summary-grid" style={{ margin: "25px 0 40px" }}>
         {[["Publicaciones", posts.length], ["Vistas", views], ["Puntuación", votes]].map(([label, value]) => <div className="card" style={{ padding: 20 }} key={label}><div className="muted">{label}</div><strong style={{ fontSize: 30 }}>{value}</strong></div>)}
       </div>
       <h2>Mis publicaciones</h2>
